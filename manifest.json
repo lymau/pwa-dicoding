@@ -2,7 +2,7 @@
     "name": "Bilan Soccer",
     "short_name": "Bilan Soccer",
     "description": "Semua tentang Liga Jerman",
-    "start_url": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#e65100",
     "theme_color": "#e65100",
