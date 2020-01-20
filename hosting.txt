@@ -1,4 +1,3 @@
-https://bilan-soccer.firebaseapp.com/
+https://nursabilly.github.io/pwa-dicoding/
 
-https://nursabilly.github.io/bilan-soccer-2/
-(saya tidak tahu kenapa yang diunggah di github favicon tidak bisa tampil, namun yang di hosting di firebase bisa. saya mohon kepada reviewer untuk meluluskan saya karena deadline kelas saya tinggal 1 hari. atau jika memang belum lulus beritahu secepat mungkin kesalahan saya agar saya dapat lolos pada beasiswa kali ini.)
+https://bilan-soccer.firebaseapp.com/
