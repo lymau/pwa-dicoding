@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Bilan Soccer</title>
+  <meta name="description" content="Bilan Soccer"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#e65100"/>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav class="orange darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo" id="logo-container">Bilan Soccer</a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  <!-- Container -->
+  <div class="container" id="body-content">
+    <div class="row">
+      <h2>Profil Tim </h2>
+      <h5>Tekan tombol save di pojok kanan bawah untuk menyimpan ke dalam tim favorit</h5>
+        <div class="container col s12 center-align" id="profil_tim">
+        </div>
+        <div class="container col s12" id="pemain">
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red" id="save">
+      <i class="large material-icons">save</i>
+      </a>
+  </div>
+  </div>
+  <!-- Dependensi -->
+  <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/loadsw.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/vendor/idb.js"></script>
+  <script src="js/db.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+            getTeamById();
+    });
+  </script>
+</body>
+</html>

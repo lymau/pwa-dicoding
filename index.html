@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Bilan Soccer</title>
+  <meta name="description" content="Bilan Soccer"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#e65100"/>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icons" type="image/png" sizes="192x192"  href="img/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav class="orange darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo" id="logo-container">Bilan Soccer</a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  <!-- Container -->
+  <div class="container" id="body-content">
+    <div class="row">
+      <h2>Klasemen Liga Jerman</h2>
+      <table class="highlight striped responsive-table" id="klasemen">
+        <thead>
+          <tr>
+            <th class="center-align">Pos.</th>
+            <th colspan="2" class="center-align">Tim</th>
+            <th class="center-align">Poin</th>
+            <th class="center-align">Main</th>
+            <th class="center-align">Menang</th>
+            <th class="center-align">Kalah</th>
+            <th class="center-align">Seri</th>
+            <th class="center-align">GM</th>
+            <th class="center-align">GK</th>
+            <th class="center-align">GD</th>
+          </tr>
+        </thead>
+        <tbody id="teams_list"></tbody>
+      </table>
+      <br>
+      <div id="last_updated"></div>
+    </div>
+  </div>
+  <!-- Dependensi -->
+  <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/loadsw.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/vendor/idb.js"></script>
+  <script src="js/db.js"></script>
+  <script>
+    function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
+        .replace(/-/g, '+')
+        .replace(/_/g, '/');
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+}
+    document.addEventListener("DOMContentLoaded", function() {
+        getStandings();
+    });
+  </script>
+</body>
+</html>
