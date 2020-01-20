@@ -13,6 +13,7 @@ workbox.setConfig({
 // precache
 workbox.precaching.precacheAndRoute([
     { url: 'index.html', revision: '3' },
+    { url: 'favicon.ico', revision: '1'},
     { url: 'nav.html', revision: '1' },
     { url: 'favorit.html', revision: '2' },
     { url: 'tim.html', revision: '1' },
