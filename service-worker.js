@@ -12,11 +12,11 @@ workbox.setConfig({
 
 // precache
 workbox.precaching.precacheAndRoute([
-    { url: 'index.html', revision: '2' },
+    { url: 'index.html', revision: '3' },
     { url: 'nav.html', revision: '1' },
-    { url: 'favorit.html', revision: '1' },
+    { url: 'favorit.html', revision: '2' },
     { url: 'tim.html', revision: '1' },
-    { url: 'manifest.json', revision: '2' },
+    { url: 'manifest.json', revision: '3' },
     { url: 'css/materialize.min.css', revision: '1' },
     { url: 'css/main.css', revision: '1' },
     { url: 'js/materialize.min.js', revision: '1' },
@@ -24,7 +24,7 @@ workbox.precaching.precacheAndRoute([
     { url: 'js/nav.js', revision: '1' },
     { url: 'js/api.js', revision: '2' },
     { url: 'js/db.js', revision: '1' },
-    { url: 'js/loadsw.js', revision: '1' }
+    { url: 'js/loadsw.js', revision: '2' }
 ],
     { ignoreURLParametersMatching: [/.*/] });
 
